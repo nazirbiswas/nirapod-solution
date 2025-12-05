@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নিরাপদ সলিউশন - সিসিটিভি ও এক্সেসরিজ</title>
+    <style>
+        /* CSS স্টাইল শুরু */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #333;
+            --light-bg: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--secondary-color);
+        }
+
+        /* হেডার এবং নেভিগেশন */
+        header {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4da6ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4da6ff;
+        }
+
+        /* হিরো সেকশন */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/1600x900/?cctv,security');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 30px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+
+        .btn:hover {
+            background: #004494;
+        }
+
+        /* সেকশন স্টাইল */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        /* সার্ভিস বা সেবা */
+        .services-grid, .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            color: var(--secondary-color);
+        }
+
+        /* কন্টাক্ট সেকশন */
+        .contact {
+            background: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* মোবাইল রেসপন্সিভ */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .container { flex-direction: column; }
+            nav ul { margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">নিরাপদ সলিউশন</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">হোম</a></li>
+                    <li><a href="#services">সেবা</a></li>
+                    <li><a href="#products">পণ্যসমূহ</a></li>
+                    <li><a href="#contact">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>আপনার নিরাপত্তা আমাদের দায়িত্ব</h1>
+        <p>সেরা মানের সিসিটিভি ক্যামেরা, ইনস্টলেশন এবং কম্পিউটার এক্সেসরিজ এর বিশ্বস্ত প্রতিষ্ঠান।</p>
+        <br>
+        <a href="#contact" class="btn">অর্ডার করতে কল করুন</a>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">আমাদের সেবাসমূহ</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>সিসিটিভি ইনস্টলেশন</h3>
+                <p>বাসাবাড়ি, অফিস বা কারখানায় দক্ষ টেকনিশিয়ান দ্বারা সিসিটিভি সেটআপ করা হয়।</p>
+            </div>
+            <div class="card">
+                <h3>মেরামত ও মেইনটেনেন্স</h3>
+                <p>পুরানো ক্যামেরা বা ডিভিআর নষ্ট হয়ে গেছে? আমরা দ্রুত সার্ভিসিং প্রদান করি।</p>
+            </div>
+            <div class="card">
+                <h3>সিকিউরিটি কনসালটেন্সি</h3>
+                <p>কোন ক্যামেরা আপনার জন্য ভালো হবে, তা নিয়ে আমরা পরামর্শ দিই।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" style="background-color: #e9ecef;">
+        <h2 class="section-title">আমাদের পণ্যসমূহ</h2>
+        <div class="products-grid">
+            <div class="card">
+                <div style="height:150px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:5px;">
+                    📷 সিসিটিভি ক্যামেরা
+                </div>
+                <h3>HD ও IP ক্যামেরা</h3>
+                <p>হাই কোয়ালিটি নাইট ভিশন ক্যামেরা সুলভ মূল্যে।</p>
+            </div>
+            <div class="card">
+                <div style="height:150px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:5px;">
+                    🖥️ মনিটর
+                </div>
+                <h3>এলইডি মনিটর</h3>
+                <p>বিভিন্ন সাইজের নতুন ও রিকন্ডিশন মনিটর।</p>
+            </div>
+            <div class="card">
+                <div style="height:150px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:5px;">
+                    💾 হার্ড ডিস্ক
+                </div>
+                <h3>সার্ভিল্যান্স হার্ড ডিস্ক</h3>
+                <p>১ টিবি, ২ টিবি সহ সব ধরণের হার্ড ড্রাইভ।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container" style="display: block;">
+            <h2 class="section-title" style="color: white;">যোগাযোগ করুন</h2>
+            <p>যেকোনো প্রয়োজনে আমাদের কল করুন অথবা মেসেজ পাঠান।</p>
+            
+            <div style="margin: 30px 0;">
+                <h3>📞 মোবাইল: 9775024393</h3>
+                <h3>📍 ঠিকানা:vill Berachampa (kayal para) po debalaya ps deganga dist north 24 parganas pin 743424</h3>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="আপনার নাম" required>
+                <input type="text" placeholder="মোবাইল নম্বর" required>
+                <textarea rows="5" placeholder="আপনার কি প্রয়োজন?" required></textarea>
+                <button type="submit" class="btn" style="width: 100%; border: 1px solid white;">মেসেজ পাঠান</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; ২০২৪ নিরাপদ সলিউশন। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+</body>
+</html>
